@@ -1,0 +1,10 @@
+15:35:52 **** Incremental Build of configuration Debug for project rescapt ****
+make all 
+arm-none-eabi-size   rescapt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32180	     40	   2904	  35124	   8934	rescapt.elf
+Finished building: default.size.stdout
+ 
+
+15:35:52 Build Finished. 0 errors, 0 warnings. (took 319ms)
+

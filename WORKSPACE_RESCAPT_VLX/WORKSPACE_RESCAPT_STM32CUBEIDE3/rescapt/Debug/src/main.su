@@ -1,0 +1,10 @@
+/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/core/core_cm3.h:1524:22:NVIC_SetPriority	16	static
+/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/core/core_cm3.h:1616:22:NVIC_SystemReset	4	static,ignoring_inline_asm
+/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/core/core_cm3.h:1656:26:SysTick_Config	16	static
+../src/main.c:49:5:main	72	static
+../src/main.c:202:6:can_callback	32	static
+../src/main.c:222:6:HAL_TIM_PeriodElapsedCallback	16	static
+../src/main.c:229:6:VL6180x_Init	16	static
+../src/main.c:258:6:VL6180x_Step	16	static
+../src/main.c:348:6:SendEnvironmentalData	72	static
+../src/main.c:402:6:send_lum_dist	8	static

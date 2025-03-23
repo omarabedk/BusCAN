@@ -1,0 +1,111 @@
+14:07:28 **** Incremental Build of configuration Debug for project rescapt ****
+make all 
+arm-none-eabi-gcc "../src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F103xB -DUSE_HAL_DRIVER -c -I"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/HAL_Driver/Inc/Legacy" -I"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/src/vl6180x" -I"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/Utilities/STM32F1xx_Nucleo" -I"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/inc" -I"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/device" -I"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/core" -I"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/HAL_Driver/Inc" -O0 -ffunction-sections -Wall -fcommon -fstack-usage -MMD -MP -MF"src/main.d" -MT"src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/main.o"
+../src/main.c: In function 'main':
+../src/main.c:57:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+   57 |  int i;
+      |      ^
+../src/main.c: In function 'SendEnvironmentalData':
+../src/main.c:353:5: warning: implicit declaration of function 'MCR_BLUEMS_F2I_2D' [-Wimplicit-function-declaration]
+  353 |     MCR_BLUEMS_F2I_2D(pres_value, intPart, decPart);
+      |     ^~~~~~~~~~~~~~~~~
+../src/main.c:357:5: warning: implicit declaration of function 'MCR_BLUEMS_F2I_1D' [-Wimplicit-function-declaration]
+  357 |     MCR_BLUEMS_F2I_1D(temp_value, intPart, decPart);
+      |     ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'send_lum_dist':
+../src/main.c:433:9: warning: implicit declaration of function 'send_lum_can'; did you mean 'send_lum_dist'? [-Wimplicit-function-declaration]
+  433 |         send_lum_can();
+      |         ^~~~~~~~~~~~
+      |         send_lum_dist
+../src/main.c: In function 'SendEnvironmentalData':
+../src/main.c:353:5: warning: 'intPart' is used uninitialized in this function [-Wuninitialized]
+  353 |     MCR_BLUEMS_F2I_2D(pres_value, intPart, decPart);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:353:5: warning: 'decPart' is used uninitialized in this function [-Wuninitialized]
+arm-none-eabi-gcc -o "rescapt.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/LinkerScript.ld" --specs=nosys.specs -Wl,-Map="rescapt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rescapt.elf
+ 
+arm-none-eabi-size   rescapt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49108	    388	   2884	  52380	   cc9c	rescapt.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  rescapt.elf  > "rescapt.list"
+Finished building: rescapt.list
+ 
+arm-none-eabi-objcopy  -O binary  rescapt.elf  "rescapt.bin"
+Finished building: rescapt.bin
+ 
+14:07:37 **** Incremental Build of configuration Debug for project rescapt ****
+make all 
+arm-none-eabi-size   rescapt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49108	    388	   2884	  52380	   cc9c	rescapt.elf
+Finished building: default.size.stdout
+ 
+14:27:03 **** Incremental Build of configuration Debug for project rescapt ****
+make all 
+arm-none-eabi-size   rescapt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49108	    388	   2884	  52380	   cc9c	rescapt.elf
+Finished building: default.size.stdout
+ 
+14:57:21 **** Incremental Build of configuration Debug for project rescapt ****
+make all 
+arm-none-eabi-gcc "../src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F103xB -DUSE_HAL_DRIVER -c -I"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/HAL_Driver/Inc/Legacy" -I"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/src/vl6180x" -I"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/Utilities/STM32F1xx_Nucleo" -I"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/inc" -I"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/device" -I"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/core" -I"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/HAL_Driver/Inc" -O0 -ffunction-sections -Wall -fcommon -fstack-usage -MMD -MP -MF"src/main.d" -MT"src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/main.o"
+../src/main.c: In function 'main':
+../src/main.c:67:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+   67 |  int i;
+      |      ^
+../src/main.c: In function 'SendEnvironmentalData':
+../src/main.c:357:5: warning: implicit declaration of function 'MCR_BLUEMS_F2I_2D' [-Wimplicit-function-declaration]
+  357 |     MCR_BLUEMS_F2I_2D(pres_value, intPart, decPart);
+      |     ^~~~~~~~~~~~~~~~~
+../src/main.c:361:5: warning: implicit declaration of function 'MCR_BLUEMS_F2I_1D' [-Wimplicit-function-declaration]
+  361 |     MCR_BLUEMS_F2I_1D(temp_value, intPart, decPart);
+      |     ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'send_lum_dist':
+../src/main.c:437:9: warning: implicit declaration of function 'send_lum_can'; did you mean 'send_lum_dist'? [-Wimplicit-function-declaration]
+  437 |         send_lum_can();
+      |         ^~~~~~~~~~~~
+      |         send_lum_dist
+../src/main.c: In function 'SendEnvironmentalData':
+../src/main.c:357:5: warning: 'intPart' is used uninitialized in this function [-Wuninitialized]
+  357 |     MCR_BLUEMS_F2I_2D(pres_value, intPart, decPart);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:357:5: warning: 'decPart' is used uninitialized in this function [-Wuninitialized]
+arm-none-eabi-gcc -o "rescapt.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/e2024/y24terro/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/LinkerScript.ld" --specs=nosys.specs -Wl,-Map="rescapt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rescapt.elf
+ 
+arm-none-eabi-size   rescapt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49108	    388	   2884	  52380	   cc9c	rescapt.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  rescapt.elf  > "rescapt.list"
+Finished building: rescapt.list
+ 
+arm-none-eabi-objcopy  -O binary  rescapt.elf  "rescapt.bin"
+Finished building: rescapt.bin
+ 
+14:57:27 **** Incremental Build of configuration Debug for project rescapt ****
+make all 
+arm-none-eabi-size   rescapt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49108	    388	   2884	  52380	   cc9c	rescapt.elf
+Finished building: default.size.stdout
+ 
+14:58:00 **** Incremental Build of configuration Debug for project rescapt ****
+make all 
+arm-none-eabi-size   rescapt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49108	    388	   2884	  52380	   cc9c	rescapt.elf
+Finished building: default.size.stdout
+ 
+14:58:12 **** Incremental Build of configuration Debug for project rescapt ****
+make all 
+arm-none-eabi-size   rescapt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49108	    388	   2884	  52380	   cc9c	rescapt.elf
+Finished building: default.size.stdout
+ 

@@ -1,0 +1,10 @@
+/home/e2023/p3alhajj/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/core/core_cm3.h:1524:22:NVIC_SetPriority	16	static
+/home/e2023/p3alhajj/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/core/core_cm3.h:1656:26:SysTick_Config	16	static
+../src/main.c:51:5:main	48	static
+../src/main.c:165:6:can_callback	32	static
+../src/main.c:183:6:can_send_temperature	8	static
+../src/main.c:194:6:can_send_accel	8	static
+../src/main.c:210:6:can_send_gyro	8	static
+../src/main.c:227:6:can_send_accel_g	16	static
+../src/main.c:247:6:can_send_gyro_rad_s	16	static
+../src/main.c:272:6:HAL_TIM_PeriodElapsedCallback	16	static

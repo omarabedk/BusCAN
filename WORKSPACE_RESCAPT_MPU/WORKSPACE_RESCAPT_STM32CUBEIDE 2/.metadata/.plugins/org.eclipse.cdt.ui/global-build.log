@@ -1,0 +1,75 @@
+15:35:48 **** Incremental Build of configuration Debug for project rescapt ****
+make all 
+arm-none-eabi-gcc "../src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103RBTx -DNUCLEO_F103RB -DDEBUG -DSTM32F103xB -DUSE_HAL_DRIVER -c -I"/home/e2023/p3alhajj/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/HAL_Driver/Inc/Legacy" -I"/home/e2023/p3alhajj/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/src/vl6180x" -I"/home/e2023/p3alhajj/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/Utilities/STM32F1xx_Nucleo" -I"/home/e2023/p3alhajj/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/inc" -I"/home/e2023/p3alhajj/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/device" -I"/home/e2023/p3alhajj/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/CMSIS/core" -I"/home/e2023/p3alhajj/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/HAL_Driver/Inc" -O0 -ffunction-sections -Wall -fcommon -fstack-usage -MMD -MP -MF"src/main.d" -MT"src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/main.o"
+../src/main.c: In function 'main':
+../src/main.c:57:2: warning: implicit declaration of function 'uart1_Init'; did you mean 'uart3_Init'? [-Wimplicit-function-declaration]
+   57 |  uart1_Init();
+      |  ^~~~~~~~~~
+      |  uart3_Init
+../src/main.c:146:6: warning: implicit declaration of function 'can_send_temperature' [-Wimplicit-function-declaration]
+  146 |      can_send_temperature();
+      |      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:147:6: warning: implicit declaration of function 'can_send_accel' [-Wimplicit-function-declaration]
+  147 |      can_send_accel();
+      |      ^~~~~~~~~~~~~~
+../src/main.c:148:6: warning: implicit declaration of function 'can_send_gyro' [-Wimplicit-function-declaration]
+  148 |      can_send_gyro();
+      |      ^~~~~~~~~~~~~
+../src/main.c:149:6: warning: implicit declaration of function 'can_send_accel_g' [-Wimplicit-function-declaration]
+  149 |      can_send_accel_g();
+      |      ^~~~~~~~~~~~~~~~
+../src/main.c:150:5: warning: implicit declaration of function 'can_send_gyro_rad_s' [-Wimplicit-function-declaration]
+  150 |     can_send_gyro_rad_s();
+      |     ^~~~~~~~~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:183:6: warning: conflicting types for 'can_send_temperature'
+  183 | void can_send_temperature(){
+      |      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:146:6: note: previous implicit declaration of 'can_send_temperature' was here
+  146 |      can_send_temperature();
+      |      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:194:6: warning: conflicting types for 'can_send_accel'
+  194 | void can_send_accel(){
+      |      ^~~~~~~~~~~~~~
+../src/main.c:147:6: note: previous implicit declaration of 'can_send_accel' was here
+  147 |      can_send_accel();
+      |      ^~~~~~~~~~~~~~
+../src/main.c:210:6: warning: conflicting types for 'can_send_gyro'
+  210 | void can_send_gyro(){
+      |      ^~~~~~~~~~~~~
+../src/main.c:148:6: note: previous implicit declaration of 'can_send_gyro' was here
+  148 |      can_send_gyro();
+      |      ^~~~~~~~~~~~~
+../src/main.c:227:6: warning: conflicting types for 'can_send_accel_g'
+  227 | void can_send_accel_g(){
+      |      ^~~~~~~~~~~~~~~~
+../src/main.c:149:6: note: previous implicit declaration of 'can_send_accel_g' was here
+  149 |      can_send_accel_g();
+      |      ^~~~~~~~~~~~~~~~
+../src/main.c:247:6: warning: conflicting types for 'can_send_gyro_rad_s'
+  247 | void can_send_gyro_rad_s() {
+      |      ^~~~~~~~~~~~~~~~~~~
+../src/main.c:150:5: note: previous implicit declaration of 'can_send_gyro_rad_s' was here
+  150 |     can_send_gyro_rad_s();
+      |     ^~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rescapt.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/e2023/p3alhajj/Bureau/WORKSPACE_RESCAPT_STM32CUBEIDE/rescapt/LinkerScript.ld" --specs=nosys.specs -Wl,-Map="rescapt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rescapt.elf
+ 
+arm-none-eabi-size   rescapt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32180	     40	   2904	  35124	   8934	rescapt.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  rescapt.elf  > "rescapt.list"
+Finished building: rescapt.list
+ 
+arm-none-eabi-objcopy  -O binary  rescapt.elf  "rescapt.bin"
+Finished building: rescapt.bin
+ 
+15:35:52 **** Incremental Build of configuration Debug for project rescapt ****
+make all 
+arm-none-eabi-size   rescapt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32180	     40	   2904	  35124	   8934	rescapt.elf
+Finished building: default.size.stdout
+ 
